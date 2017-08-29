@@ -1,0 +1,20 @@
+react组件的生命周期
+
+1、装载过程（Mount）
+constructor--构造函数  初始化state 绑定成员函数的this环境
+getInitialState -- 初始化组件的this.state 这个方法只有用React.createClass方法创建的组件类才会发生作用。
+getDefaultProps -- 初始化组件的props 这个方法只有用React.createClass方法创建的组件类才会发生作用。
+componentWillMount -- 可以在服务器端被调用
+render -- 渲染函数 是一个纯函数，完全根据this.state和this.props来决定返回的结果。
+componentDidMount -- 只能在浏览器端被调用
+
+2、更新过程（Update）
+componentWillReceiveProps -- componentWillReceiveProps(nextProps) 父组件的render函数被调用，在render函数里面被渲染的子组件就会经历更新过程，不管父组件传给子组件的props有没有改变，都会触发子组件的componentWillReceiveProps函数。
+shouldComponentUpdate -- shouldComponentUpdate(nextProps, nextState) 
+componentWillUpdate
+render
+componentDidUpdate
+
+3、卸载过程(Unmount)
+componentWillUnmount
+componentDidMount
