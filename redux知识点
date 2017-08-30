@@ -1,0 +1,15 @@
+Redux基本原则
+1、唯一数据源
+数据只存储在唯一的一个Store上
+
+2、保持状态只读
+不能去直接修改状态，必须要通过派发一个action对象完成
+
+3、数据改变只能通过纯函数完成
+纯函数：Reducer，
+reducer(state, action) 函数的返回结果必须完全由参数state和action决定，不产生任何副作用，不能修改参数state和action对象
+
+Redux的reducer只负责计算状态，不负责存储状态
+
+
+
